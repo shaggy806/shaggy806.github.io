@@ -1,7 +1,9 @@
 const test = []
 function setup() {
   rectMode(CENTER)
-  createCanvas(windowWidth, windowHeight);
+  var cnv = createCanvas(700, windowHeight-30);
+  cnv.position = (0,30)
+  // cnv.position((windowWidth - width)/2, (windowHeight - height)/2)
   for (i = 0; i < 30; i++){
     test.push(new ball)
   }
@@ -29,6 +31,6 @@ function mousePressed(){
   // test.push(nBall)
 }
 
-function windowResized(){
-  resizeCanvas(windowWidth, windowHeight)
-}
+// function windowResized(){
+//   resizeCanvas(windowWidth, windowHeight)
+// }

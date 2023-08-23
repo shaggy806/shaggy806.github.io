@@ -1,9 +1,9 @@
 class ball extends rb{
   constructor() {
     super();
-    this.pos = createVector(random(windowWidth / 1.2) + 40, random(windowHeight / 1.2) + 40)
+    this.pos = createVector(random(width / 1.2) + 40, random(height / 1.2) + 40)
     this.vel = createVector(0, 0)
-    this.r = random(50)+5
+    this.r = random(35)+5
     this.m = 10 * (this.r / 20)
     this.c = color(random(255), random(255), random(255))
     this.t = false
@@ -17,11 +17,11 @@ class ball extends rb{
       this.t = false
     }
 
-    if (this.pos.x > windowWidth - this.r || this.pos.x < this.r) {
+    if (this.pos.x > width - this.r || this.pos.x < this.r) {
       this.vel.x *= -1
       this.pos.x += this.vel.x
     }
-    if (this.pos.y > windowHeight - this.r || this.pos.y < this.r) {
+    if (this.pos.y > height - this.r || this.pos.y < this.r) {
       this.vel.y *= -1
       this.pos.y += this.vel.y
     } 
